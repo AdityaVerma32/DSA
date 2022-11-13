@@ -21,7 +21,6 @@ struct Node *insert(struct Node *root, int a)
     {
         return new Node(a);
     }
-
     if (a < root->data)
     {
         root->left = insert(root->left, a);

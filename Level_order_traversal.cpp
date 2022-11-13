@@ -54,9 +54,9 @@ void print(struct Tree *root)
         printf("%d ", cur->data);
         q.pop();
 
-        if (cur->left != NULL)
+        if (cur->left )
             q.push(cur->left);
-        if (cur->right != NULL)
+        if (cur->right )
             q.push(cur->right);
     }
 }

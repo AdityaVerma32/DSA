@@ -1,4 +1,11 @@
-#include<bits/stdc++.h>
+/*
+Descrption of code :
+
+This program is used make an AVL tree and print the inorder,preorder and postorder traversal of that tree
+*/
+
+#include<iostream>
+#include<queue>
 using namespace std;
 struct Node
 {
@@ -20,14 +27,14 @@ int max(int a,int b)
     return (a>b)?a:b;
 }
 
-int height(Node *root)
+int height(Node *root)  // function to find height of the node
 {
     if(root==NULL)
         return 0;
     return root->height;
 }
 
-Node *rightRotate(Node *root)
+Node *rightRotate(Node *root)   // function to rotate right
 {
     Node *x=root->left;
     Node *temp=x->right;
@@ -38,7 +45,7 @@ Node *rightRotate(Node *root)
     return x;
 }
 
-Node *leftRotate(Node *root)
+Node *leftRotate(Node *root)    //function  to rotate left
 {
     Node *x=root->right;
     Node *temp=x->left;
@@ -49,7 +56,7 @@ Node *leftRotate(Node *root)
     return x;
 }
 
-int balancefac(Node *root)
+int balancefac(Node *root)  //function to find the balancing factor of a node
 {
     if(root==NULL)
         return 0;
@@ -131,8 +138,31 @@ void levelOrderTraversal(Node *root)
     
 }
 
+void test()
+{
+    Node* root=NULL;
+    root=createAVLtree(root,21);
+    root = createAVLtree(root, 26);
+    root = createAVLtree(root, 30);
+    root = createAVLtree(root, 9);
+    root = createAVLtree(root, 4);
+    root = createAVLtree(root, 14);
+    root = createAVLtree(root, 28);
+    root = createAVLtree(root, 18);
+    root = createAVLtree(root, 15);
+    root = createAVLtree(root, 10);
+    root = createAVLtree(root, 2);
+    root = createAVLtree(root, 3);
+    root = createAVLtree(root, 7);
+
+    inorder(root);
+    cout << endl
+         << endl;
+}
+
 int main()
 {
+    test();
     Node *root=NULL;
     int a;
     char m='y';

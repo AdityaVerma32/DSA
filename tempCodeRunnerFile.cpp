@@ -1,22 +1,25 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main()
+#define lli long long int
+#define mod 998244353
+
+int solution()
 {
-  int arr[6][6];
-  int a,b;
-  for(int i=1;i<6;i++)
-  {
-    for(int j=1;j<6;j++)
-    {
-      cin>>arr[i][j];
-      if(arr[i][j]==1)
-      {
-        a=i;
-        b=j;
-      }
-    }
-  }
-  cout<<abs(5-a)+abs(5-b);
+    int aa,be,ci;
+    if ((aa == (be + ci)) || (be == (aa + ci)) || (ci == (be + aa)))
+    cout<<"YES"<<endl;
+    else
+    cout<<"NO"<<endl;
 }
 
+int main()
+{
+    int adi;
+    cin >> adi;
+    while (adi--)
+    {
+       solution();
+    }
+    return 0;
+}
